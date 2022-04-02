@@ -5,10 +5,10 @@ const helmet = require('helmet');
 
 
 
-const userRoutes = require('./routes/user');
-const articleRoutes = require('./routes/article');
-const commentRoutes = require('./routes/comment');
-const likeRoutes = require('./routes/likes');
+//const userRoutes = require('./routes/user');
+//const articleRoutes = require('./routes/article');
+//const commentRoutes = require('./routes/comment');
+//const likeRoutes = require('./routes/likes');
 
 
 const app = express();
@@ -41,12 +41,12 @@ app.use((req, res, next) => {
     );
     next();
 });
-app.use('/images', express.static(path.join(__dirname, 'images')));
-app.use(bodyParser.json());
+//app.use('/images', express.static(path.join(__dirname, 'images')));
+//app.use(bodyParser.json());
 
-app.use('/api/auth', userRoutes);
-app.use('/api/auth', articleRoutes);
-app.use('/api/auth', commentRoutes);
-app.use('/api/auth', likeRoutes);
+//app.use('/api/auth', userRoutes);
+//app.use('/api/auth', articleRoutes);
+//app.use('/api/auth', commentRoutes);
+//app.use('/api/auth', likeRoutes);
 
 module.exports = app;
